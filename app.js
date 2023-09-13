@@ -1,33 +1,30 @@
 console.log("Let's Play Dice Game!");
 
-
 let players ={
-    // player1: {name: "abdullah", score:0},
-    player1: {name: "sarfaraz", score:0},
-    player2: {name: "fatah", score:0},
-    // player4: {name: "rafay", score:0}
+    player1: {name: a , score:0},
+    player2: {name: b , score:0},
+    player3: {name: c , score:0},
+    player4: {name: d , score:0}
 }
-
-// const random = () => {
-//     return Math.random() * 6;
-//   }
-//                                                 //  <--- this is not working
-// let rollDie =random(1,6)
-// rollDie = Number.parseInt(rollDie)
-
 
 function rollDie() {
     return Math.floor(Math.random() * 6) + 1; // don't knkow  why it is working
   }
   
 function playDice(numround) {
+    
+a = prompt("Enter your name: ");
+b = prompt("Enter your name: ");
+c = prompt("Enter your name: ");
+d = prompt("Enter your name: ");
+
     for (let i = 0; i < numround; i++) {
         let player1Roll = rollDie()
         let player2Roll = rollDie()
-        // let player3Roll = rollDie()
-        // let player4Roll = rollDie()
+        let player3Roll = rollDie()
+        let player4Roll = rollDie()
     
-    while(player1Roll === player2Roll){
+    while(player1Roll === player2Roll || player1Roll === player3Roll || player1Roll === player4Roll || player2Roll === player3Roll || player2Roll === player4Roll || player3Roll ===player4Roll){
         player1Roll = rollDie()
         player2Roll = rollDie()
     }
